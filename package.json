@@ -28,6 +28,7 @@
     "@semantic-release/git": "^10.0.1",
     "@types/node": "latest",
     "bun-types": "latest",
+    "fs-jetpack": "^5.1.0",
     "semantic-release": "^22.0.1",
     "typescript": "^5.2.2"
   },
