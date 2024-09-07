@@ -16,6 +16,7 @@ export * from "./spinner"
 export * from "./progress"
 export * from "./utils"
 export * from "./billboard"
+export * from "./filesystem"
 
 export interface CursorPos {
   rows: number
