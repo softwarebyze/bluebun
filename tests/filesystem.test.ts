@@ -1,5 +1,5 @@
-import { filesystem } from 'bluebun'
-
+import { filesystem } from "bluebun"
+import { expect, test } from "bun:test"
 
 // for reference, copied from [gluegun](https://github.com/infinitered/gluegun/blob/master/src/toolbox/filesystem-tools.test.ts):
 
@@ -17,10 +17,10 @@ import { filesystem } from 'bluebun'
 //   expect(filesystem.isNotFile(__dirname)).toBe(true)
 // })
 
-// test('isDirectory', () => {
-//   expect(filesystem.isDirectory(__dirname)).toBe(true)
-//   expect(filesystem.isDirectory(__filename)).toBe(false)
-// })
+test("isDirectory", () => {
+  expect(filesystem.isDirectory(__dirname)).toBe(true)
+  expect(filesystem.isDirectory(__filename)).toBe(false)
+})
 
 // test('isNotDirectory', () => {
 //   expect(filesystem.isNotDirectory(__dirname)).toBe(false)

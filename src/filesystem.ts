@@ -3,11 +3,21 @@ import { FSJetpack } from 'fs-jetpack/types'
 
 export interface BluebunFilesystem extends FSJetpack {}
 
+/**
+ * Is this a directory?
+ *
+ * @param path The directory to check.
+ * @returns True/false -- does the directory exist?
+ */
+function isDirectory(path: string): boolean {
+    return jetpack.exists(path) === 'dir'
+  }
 
 export const filesystem = {
     // path: {},
     // dir: {},
     // copy: {},
+    isDirectory,
     ...jetpack
 }
 

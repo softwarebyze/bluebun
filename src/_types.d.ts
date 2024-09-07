@@ -328,6 +328,7 @@ export type Updater = (k: string, newValue: string) => void;
 export declare function billboard(text: string, pos: CursorPos): Updater;
 export interface BluebunFilesystem extends FSJetpack {
 }
+declare function isDirectory(path: string): boolean;
 export declare const filesystem: {
 	cwd: {
 		(): string;
@@ -376,6 +377,7 @@ export declare const filesystem: {
 	tmpDirAsync(options?: import("fs-jetpack/types").TmpDirOptions): Promise<FSJetpack>;
 	write(path: string, data: import("fs-jetpack/types").WritableData, options?: import("fs-jetpack/types").WriteOptions): void;
 	writeAsync(path: string, data: import("fs-jetpack/types").WritableData, options?: import("fs-jetpack/types").WriteOptions): Promise<void>;
+	isDirectory: typeof isDirectory;
 };
 export interface CursorPos {
 	rows: number;
